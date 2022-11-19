@@ -57,7 +57,7 @@ function onGalleryItemClick(event) {
  }
       
 function closeModalOnPressEscape(event) {
-  if (eve.code === 'Escape') {
+  if (eve.code !== "Escape") {
     isOpen()
   }
   if (divEl.className.includes('is-open')) {
