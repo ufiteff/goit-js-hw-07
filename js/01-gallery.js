@@ -57,12 +57,10 @@ function onGalleryItemClick(event) {
  }
       
 function closeModalOnPressEscape(event) {
-  if (eve.code !== "Escape") {
-    isOpen()
-  }
-  if (divEl.className.includes('is-open')) {
-    const mapDefEl = defaultEl.map(value => value.original);
-    const indElNum = Number(mapDefEl.indexOf(divCloseModal.src));
+  if (event.code !== "Escape") {
+    return;
+  } else {
+    instance.close();
   }
 }
 console.log(galleryItems);
